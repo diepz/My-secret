@@ -1,0 +1,24 @@
+
+Lỗi: Access denied for user 'root'@'localhost'
+Cách fix: 
+step 1. sudo mysql -u root -p
+
+step 2. USE mysql;
+
+step 3. ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';
+
+step 4. exit
+
+
+Lỗi docker.servie 
+curl -sSL https://get.docker.com/ | sh
+
+Lỗi docker connect demon
+sudo systemctl start docker
+sudo systemctl enable docker
+
+Lỗi Error response from daemon: cannot stop container
+cách fix: sudo systemctl restart docker.service
+
+Lỗi SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution (SQL: select * from `posts`)
+Cách fix: ifconfig 
